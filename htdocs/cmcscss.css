@@ -1,0 +1,545 @@
+/*//////GENERAL/////////////////////////////////////////////*/
+
+body {
+	margin:0px;
+	padding:0px;
+	font-family: 'Crimson Text', serif;
+	font-size:16px;
+	color:#7b7b7b;
+    background-image: none;
+    background: #fff;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+	margin:10px 0 10px 0;
+	color:#2b2a2a;
+	letter-spacing:1px;
+}
+
+img {
+	border:none;
+	max-width:100%
+}
+
+p {
+	margin: 0 0 20px 0;
+    font-weight:400;
+    font-size: 1em;
+    line-height: 1.4em;
+    font-family: 'Open Sans', sans-serif;
+    color:#7b7b7b;
+}
+
+li { 
+	list-style:none;
+}
+
+a {
+	color:#2b2a2a;
+	outline:none;
+	text-decoration:underline;
+    font-weight: 700;
+}
+
+a:hover { 
+	color:#000000;
+	outline:none;
+}
+
+a:active{
+	outline: none;
+}
+
+.noUnderline {
+    text-decoration: none;
+}
+
+span.italic {
+    font-style: italic;
+}
+
+span.bold {
+    font-weight: bold;
+}
+
+/*////// HEADER & NAVIGATION /////////////////////////////////////////////*/
+
+#topbar {
+    height: auto;
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;     /* NEW - Chrome */
+                    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-align-items: center;
+        align-items: center;
+    position:fixed;
+    width:100%;
+    background:none repeat scroll 0 0 rgba(0, 0, 0, 0.9);
+}
+
+.logo {
+    max-width: 156px;
+    margin-left: 160px;
+    border: 1px solid white;
+}
+
+nav {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;     /* NEW - Chrome */
+                    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-flex-direction: row;
+        flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+#topbar li {
+    margin-top:15px;
+    margin-bottom: 15px;
+	padding: 0 10px 0 10px;
+    display: -webkit-inline;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-inline;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-inline-flex;     /* NEW - Chrome */
+                    display: inline-flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+#topbar ul li a, #menuToggle {
+	font-size:1.1em;
+	letter-spacing:2px;
+	line-height:26px;
+	text-decoration:none;
+	color:#969696;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#topbar a {
+    display: block;
+    line-height: 0;
+}
+
+#topbar ul li a:hover {
+	color:#c6c5c5;
+}
+
+#showHide {
+    display: block;
+}
+
+li#menuToggle {
+    display: none;
+}
+
+#topbar ul a.current{
+	color:#fff!important;
+}
+
+.langswitch {
+    background: firebrick;
+    border-radius: 4px;
+    color: white;
+    font-weight: 400;
+    padding: 2.5px 7px 2.5px 7px;
+    text-align: center;
+}
+
+/*////// SIDEBAR ////////////////////////////////////////*/
+
+aside {
+	float:left;
+	width:285px;
+	margin:150px 0 0 0;
+	padding:0 0 0 20px;
+	position:fixed;
+	text-align:right;
+}
+
+aside h1 {
+    font-weight: 400;
+	font-size:1.5em;
+	margin:5px 0 10px 0;
+	color:#555;
+}
+
+aside p {
+    font-size: 0.9em;
+}
+
+
+/*////// MAIN CONTENT ///////////////////////////////////*/
+
+article {
+	max-width:618px;
+    min-width: 350px;
+	float:left;
+	margin:45px 0 50px 350px;
+    padding: 90px 18px 0 18px;
+}
+
+ article h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    line-height: 50px;
+}
+
+article h3 {
+	font-size: 1.2em;
+	font-weight: 400;
+    font-style: italic;
+}
+
+article p {
+	font-size: 1.1em;
+	line-height:2em;
+	margin:0 0 25px 0;
+    text-align: justify;
+}
+
+button {
+    display: block;
+    margin: 0 auto 1.5em auto;
+    padding: 0.5em 1em 0px 1.2em;
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 0 0 15px white;
+    font-family: inherit;
+    font-size: 1.4em;
+    color: white;
+    background: dimgrey;
+    letter-spacing: 0.3em;
+}
+
+button:hover {
+    background: #2b2a2a;
+    cursor: pointer;
+}
+
+/*////// JOURNAL BANNER /////////////////////////////////////////////*/
+
+#journalBanner {
+    background: white;
+    background-image: url("images/volumes.jpg");
+    width: auto;
+    height: 80px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*////// FLEXBOX SECTION (USED FOR BOOKS) /////////////////////////////////*/
+
+section.book {
+    min-height: auto;
+    border-bottom: 1px solid #cbc8c5;
+    margin-top: 35px;
+    padding-bottom: 35px;
+    display: -webkit-block;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-block;         /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox;      /* TWEENER - IE 10 */
+                display: -webkit-flex;     /* NEW - Chrome */
+                    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-flex-direction: column;
+        flex-direction: column;
+    border-bottom: 1px solid #cbc8c5;
+    margin-top: 35px;
+    padding-bottom: 35px;
+    text-align: left;
+}
+
+section.book h2 {
+    font-size: 1.4em;
+    font-style: normal;
+    margin: 0;
+}
+
+section.book h3 {
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+section.book p {
+    overflow: hidden;
+    text-align: justify;
+    margin:10px 0 0 0;
+    line-height: 2em;
+    font-size: 1em;
+}
+
+section.book p.highlight {
+    background: antiquewhite;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+section strong {
+    font-variant: small-caps;
+}
+
+div.display {
+    display: -webkit-flex;
+        display: flex;
+    -webkit-flex-direction: row;
+        flex-direction: row;
+    -webkit-align-items: stretch;
+        align-items: stretch;
+}
+
+img.bookCover {
+    width: 140px;
+    height: 200px;
+    margin-right: 30px;
+    border: 1px solid grey;
+    align-self: center;
+    margin-bottom: 0px;
+    -webkit-flex-grow: 0;
+        flex-grow: 0;
+    -webkit-flex-shrink: 0;
+        flex-shrink: 0;
+}
+
+img.bookCover.CD {
+    height: auto;
+}
+
+div.metadata {
+    display: -webkit-flex;
+        display: flex;
+    -webkit-flex-direction: column;
+        flex-direction: column;
+}
+
+div.metadata p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    padding: 0;
+    line-height: 21px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+@media screen and (max-width:385px) and (-webkit-min-device-pixel-ratio: 1) {
+    section.book {
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+    section br {
+        line-height: 2.5em;
+    }
+    div.display {
+        -webkit-flex-direction: column;
+            flex-direction: column;
+        -webkit-align-items: center;
+            align-items: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    img.bookCover {
+        -webkit-flex-grow: 1;
+            flex-grow: 1;
+        margin-right: 0px;
+        padding: 0;
+    }
+    section.book h2 {
+        margin-top: 15px;
+    }
+    section.book h3 {
+        font-size: 1.1em;
+    }
+    div.metadata p {
+        line-height: 1.5em;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+/*////// VISIBILITY TOGGLE //////////////////////////////////*/
+
+.toggle {
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+    color:#7b7b7b;
+    display: inline-block;
+}
+
+.readmore {
+    display: none;
+}
+
+
+/*////// FOOTER /////////////////////////////////////////////*/
+
+footer {
+	width:100%;
+	margin:20px 0 0 0;
+	border-top:1px #cbc8c5 solid;
+	text-align:center;
+	padding-top:10px;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+.mobileaddress {
+    display: none;
+}
+
+/*////// MEDIA QUERIES /////////////////////////////////////*/
+
+@media screen and (max-width:1200px) and (-webkit-min-device-pixel-ratio: 1) {
+    .logo {
+        margin-left: 60px;
+    }
+    
+    aside {
+        width:200px;
+        padding:0;
+    }
+    
+    article {
+        margin-left: 250px;
+    }
+
+}
+
+@media screen and (max-width:1071px) and (-webkit-min-device-pixel-ratio: 1) {
+
+    article {
+        padding-top: 130px;
+    }
+    
+    aside {
+        margin-top:187px;
+    }
+}
+
+@media screen and (max-width:864px) and (-webkit-min-device-pixel-ratio: 1) {
+    
+    aside {
+       display: none;
+    }
+    
+    footer p {
+        margin-bottom: 10px;
+    }
+    
+    .mobileaddress {
+        display: block;
+        margin: 0 0 5px 0;
+        padding: 0;
+        line-height: 1.4em;
+        text-align: left;
+    }
+    
+    article {
+        margin-left: 5%;
+        margin-right: 5%;
+        min-width: 80%;
+    }
+    .logo {
+        margin-left:5%;
+    }
+    article p {
+        line-height: 2.5em;
+    }
+
+}
+
+@media screen and (max-width:675px) and (-webkit-min-device-pixel-ratio: 1) {
+    
+    #topbar {
+        position: fixed;
+        -webkit-flex-direction: column;
+            flex-direction: column;
+        background:none repeat scroll 0 0 rgba(26, 26, 26, 1);
+    }
+    
+    #navigation li {
+        display: -webkit-flex;
+            display: flex;
+        -webkit-flex-direction: column;
+            flex-direction: column;
+        margin:0;
+        padding: 7px 0 7px 0;
+        -webkit-flex-grow: 1;
+            flex-grow: 1;
+        text-align: center;
+    }
+    
+    nav ul span li:hover {
+        background: #000;
+        cursor: pointer;
+    }
+    
+    nav ul span li:hover:last-of-type {
+        background: none;
+        cursor: default;
+    }
+    
+    nav, ul#navigation {
+        width: 100%;
+    }
+    
+    ul#navigation {
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    
+    li#menuToggle {
+        display: block;
+        display: -webkit-flex!important;
+            display: flex!important;
+        margin: 0;
+        font-size: 1.3em;
+        width: 100%;
+        background: #000000;
+        padding: 10px 0 10px 0;
+        font-style: italic;
+    }
+    
+    .langswitch {
+        width: 100px;
+        margin: 5px auto 10px;
+    }
+    
+    .hide {
+        display: none!important;
+    }
+
+    .show {
+        display: block!important;
+    }
+    
+    .logo {
+        margin: 10px 0 0 0;
+    }
+    
+    article {
+        padding-top: 150px;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 4%;
+        margin-right: 4%;
+        min-width: 92%;
+    }
+    
+    .isbn {
+        margin-bottom: 30px;
+    }
+    
+    .bookCover {
+        margin-right: 20px;
+    }
+    
+}
