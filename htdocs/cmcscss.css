@@ -221,6 +221,13 @@ button:hover {
     cursor: pointer;
 }
 
+.announcement {
+  display: block;
+  border: 1px solid firebrick;
+  padding: 10px;
+  color: black;
+}
+
 /*////// JOURNAL BANNER /////////////////////////////////////////////*/
 
 #journalBanner {
