@@ -42,6 +42,10 @@ a {
     font-weight: 700;
 }
 
+em {
+    font-style: italic;
+}
+
 a:hover { 
 	color:#000000;
 	outline:none;
