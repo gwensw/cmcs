@@ -285,6 +285,18 @@ button:hover {
     background-size: 100%;
 }
 
+.callout {
+    background: white;
+    width: auto;
+    margin: 10px 0;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.callout p {
+    margin: 0;
+}
+
 
 /*////// FLEXBOX SECTION (USED FOR BOOKS) /////////////////////////////////*/
 
@@ -503,7 +515,7 @@ footer p {
         margin-left:5%;
     }
     article p {
-        line-height: 2.5em;
+        line-height: 2em;
     }
 
 }
